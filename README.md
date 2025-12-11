@@ -1,6 +1,8 @@
 # California_Hospital_Bed_Distribution
 California Hospital Bed Distribution
 
+<img width="1366" height="768" alt="CA_Hospital" src="https://github.com/user-attachments/assets/c62d7600-16f9-40ab-a0f3-8cd9a1144915" />
+
 
 The distribution of healthcare capacity in California is characterized by an extreme geographic concentration in major metropolitan areas, leading to stark disparities between urban centers and rural counties. Furthermore, the overall bed capacity is dominated by Skilled Nursing Facilities (SNFs), which cater to long-term care rather than critical acute emergencies.
 Key Finding: Over 56% of total beds are non-acute (SNFs, Residential, etc.) or are in facilities with no specified Emergency Room services. This structure makes the state vulnerable to acute care surges, particularly in sparsely populated regions.
