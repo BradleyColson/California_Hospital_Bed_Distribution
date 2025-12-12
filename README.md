@@ -4,6 +4,7 @@ California Hospital Bed Distribution
 - [Overview](#overview)
 - [Data_Description](#Data_Description)
 - [Key_Insights](#Key_Insights)
+- 
 https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedDistribution/CaliforniaHospitalBedDistribution
 
 
@@ -13,11 +14,11 @@ https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedD
 
 Investigating the hospital bed distribution in California
 
-# Data_Description
+# Data Description
 
 10800 + rows. Data cleaned out commas that interfered with MySQL import wizard.
 
-# Key_Insights
+# Key Insights
 
 The distribution of healthcare capacity in California is seen to be concentrated in major metropolitan areas, leading to obvious disparities between urban centers and rural counties. 
 
