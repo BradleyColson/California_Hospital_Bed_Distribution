@@ -1,6 +1,9 @@
 # California_Hospital_Bed_Distribution
 California Hospital Bed Distribution
 
+https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedDistribution/CaliforniaHospitalBedDistribution
+
+
 <img width="1366" height="768" alt="CA_Hospital" src="https://github.com/user-attachments/assets/c62d7600-16f9-40ab-a0f3-8cd9a1144915" />
 
 
@@ -63,4 +66,3 @@ Goal: Decentralizing mental health care improves local access, reduces the strai
 
 
 
-https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedDistribution/CaliforniaHospitalBedDistribution
