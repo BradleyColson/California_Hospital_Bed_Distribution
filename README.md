@@ -6,7 +6,7 @@ California Hospital Bed Distribution
 - [Key_Insights](#Key_Insights)
 - [Data_Limitations](#DataLimitations)
 - [Technical_SQL_Details](#Technical_SQL_Details)
-- 
+  
 https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedDistribution/CaliforniaHospitalBedDistribution
 
 <img width="999" height="799" alt="How are California Hospital Beds Distributed_" src="https://github.com/user-attachments/assets/3065c895-95d1-41b9-a101-f79190db9841" />
