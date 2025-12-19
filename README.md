@@ -16,11 +16,11 @@ https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedD
 
 Investigating the distribution of hospital beds in California.
 
-# Data Description
+# Data_Description
 
 10800 + rows. Data consists of Facility Level Description, County, Total Number of Beds, ER Service Level, License Type, and License Category
 
-# Key Insights
+# Key_Insights
 
 The distribution of hospital bed capacity in California is concentrated in major metropolitan areas, leading to obvious capacity between urban centers and rural counties. 
 
@@ -99,7 +99,7 @@ Action: The large average size of Acute Psychiatric Hospitals (Avg 101 beds) sug
 Goal: Decentralizing mental health care improves local access, reduces the strain on patients and families traveling long distances, and integrates behavioral health more seamlessly into regional service networks.
 
 
-# DataLimitations
+# Data_Limitations
 
 The MYSQL Wizard was only importing 1862 rows of approx 10800 rows. I found that commas in the Total_Number_Beds column was being misread. I used a simple find replace to replace every comma with a space.
 
