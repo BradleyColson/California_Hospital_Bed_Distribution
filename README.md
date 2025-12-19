@@ -2,10 +2,10 @@
 California Hospital Bed Distribution
 
 - [Overview](#overview)
-- [Data Description](#DataDescription)
-- [Key Insights](#KeyInsights)
-- [Data Limitations](#DataLimitations)
-- [Technical SQL Details](#TechnicalSQLDetails)
+- [Data_Description](#DataDescription)
+- [Key_Insights](#KeyInsights)
+- [Data_Limitations](#DataLimitations)
+- [Technical_SQL_Details](#TechnicalSQLDetails)
   
 https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedDistribution/CaliforniaHospitalBedDistribution
 
