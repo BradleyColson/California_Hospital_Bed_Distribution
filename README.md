@@ -14,7 +14,7 @@ https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedD
 
 # Overview
 
-Investigating the hospital bed distribution in California
+Investigating the distribution of hospital beds in California.
 
 # Data Description
 
@@ -41,15 +41,16 @@ Orange: 14,570 Beds (113 Facilities)
 
 
 The Bed Deserts: The bottom counties demonstrate critical scarcity:
-County Name | Total Beds | Facility Count |
+County Name Total Beds  
 
-Mono | 17 | 1 |
-Mariposa | 34 | 1 |
-Trinity | 38 | 1 |
-Sierra | 39 | 1 |
+Mono       17           
+Mariposa   34           
+Trinity    38
+Sierra     39 
 
-B. Distribution by Facility Type
+Distribution by Facility Type
 The largest portion of licensed capacity is for long-term care, not intensive medical care.
+
 License Category Description Total Beds Avg Beds
 Skilled Nursing Facility     109,362    101.1
 General Acute Care Hospital   84,271    185.6
@@ -72,7 +73,8 @@ General Acute Care Hospital: 84,271 Beds (Avg size: 185)
 Acute Psychiatric Hospital: 4,260 Beds (Avg size: 101)
 
 
-C. Emergency Service Capability
+Emergency Service Capability
+
 The majority of bed inventory is disconnected from emergency services:
 ER Service Level Description Total Beds 
 
@@ -80,18 +82,17 @@ Not Applicable 117,315
 Emergency - Basic 66,810
 Emergency - Comprehensive 4,708
 
+Business Suggestion or Solution
 
-2. Business Suggestion or Solution
-The core business challenge is maximizing the utility of the existing, highly centralized bed capacity while guaranteeing minimum service levels in resource-scarce rural areas.
-Strategic Recommendation: Hybrid Capacity Model
 The state should move toward a Hybrid Capacity Model that uses technology and regulation to bridge the geographic and service-level gaps.
+
 Mandate and Subsidize Tele-Acute Care in Rural Areas:
 Action: Require the single-facility counties (like Mono, Mariposa, Trinity) to implement 24/7 Tele-ICU and Tele-Stroke/Tele-Trauma partnerships with major urban hubs (LA, San Diego).
 
-Goal: This effectively grants rural patients access to specialist expertise without requiring resource-intensive on-site staff, immediately upgrading the quality of the 17-39 existing beds from basic stabilization to effective mid-level acute care.
-Establish SNF/Acute Conversion Protocols:
-Action: Create a tiered classification system for the 109,362 Skilled Nursing Facility (SNF) beds, identifying which ones meet minimum structural standards (e.g., oxygen lines, power redundancy) to be rapidly converted to Sub-Acute Flex Wards during a declared statewide public health emergency.
-Goal: This turns the large SNF capacity into a controllable, rapid-deployment surge capacity, preventing the General Acute Care Hospitals from being immediately overwhelmed during a crisis.
+Goal: 
+
+This effectively grants rural patients access to specialist expertise without requiring resource-intensive on-site staff, immediately upgrading the quality of the 17-39 existing beds from basic stabilization to effective mid-level acute care.
+
 
 Invest in Regional Behavioral Health Centers:
 Action: The large average size of Acute Psychiatric Hospitals (Avg 101 beds) suggests institutional, centralized care. Shift funding and licensing towards establishing smaller, 20-30 bed, community-based Psychiatric Health Facilities in mid-sized counties (e.g., Fresno, Alameda).
@@ -104,7 +105,8 @@ The MYSQL Wizard was only importing 1862 rows of approx 10800 rows. I found that
 
 # Technical_SQL_Details
 
-A. Geographic Distribution (Top 3 Counties)
+Geographic Distribution (Top 3 Counties)
+
 Business Insight: Los Angeles is the dominant hub with nearly 4x the capacity of San Diego.
 SQL
 SELECT
@@ -121,7 +123,10 @@ Los Angeles: 64,642 Beds (615 Facilities)
 San Diego: 16,597 Beds (125 Facilities)
 Orange: 14,570 Beds (113 Facilities)
 
+Bed Deserts
+
 Business Insight: Rural counties are critically underserved. Mono County has only 1 facility with 17 beds.
+
 SQL
 SELECT
 	COUNTY_NAME,
@@ -134,6 +139,7 @@ Key Findings: Mono (17), Mariposa (34), Trinity (38), Sierra (39).
 
 Facility Type Distribution
 Business Insight: The majority of beds are in Skilled Nursing, not Acute Hospitals.
+
 SQL
 SELECT
     LICENSE_CATEGORY_DESC,
@@ -149,6 +155,7 @@ Acute Psychiatric Hospital: 4,260 Beds (Avg size: 101)
 
 Emergency Room Correlation
 Business Insight: Most beds (117k+) are in facilities marked "Not Applicable" for ER service (likely Nursing Homes), confirming that most bed capacity is non-emergency.
+
 SQL
 SELECT
     ER_SERVICE_LEVEL_DESC,
