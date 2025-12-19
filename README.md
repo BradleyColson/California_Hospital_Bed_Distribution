@@ -4,11 +4,13 @@ California Hospital Bed Distribution
 - [Overview](#overview)
 - [Data_Description](#Data_Description)
 - [Key_Insights](#Key_Insights)
+- [Data_Limitations](#DataLimitations)
+- - [Technical_SQL_Details](#Technical_SQL_Details)
 - 
 https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedDistribution/CaliforniaHospitalBedDistribution
 
+<img width="999" height="799" alt="How are California Hospital Beds Distributed_" src="https://github.com/user-attachments/assets/3065c895-95d1-41b9-a101-f79190db9841" />
 
-<img width="1366" height="768" alt="CA_Hospital" src="https://github.com/user-attachments/assets/c62d7600-16f9-40ab-a0f3-8cd9a1144915" />
 
 # Overview
 
@@ -16,29 +18,27 @@ Investigating the hospital bed distribution in California
 
 # Data Description
 
-10800 + rows. Data cleaned out commas that interfered with MySQL import wizard.
+10800 + rows. Data consists of Facility Level Description, County, Total Number of Beds, ER Service Level, License Type, and License Category
 
 # Key Insights
 
-The distribution of healthcare capacity in California is seen to be concentrated in major metropolitan areas, leading to obvious disparities between urban centers and rural counties. 
+The distribution of hospital bed capacity in California is concentrated in major metropolitan areas, leading to obvious capacity between urban centers and rural counties. 
 
 The overall bed capacity is dominated by Skilled Nursing Facilities (SNFs), which cater to long-term care rather than critical acute emergencies.
 
 Key Finding: Over 56% of total beds are non-acute (SNFs, Residential, etc.) or are in facilities with no specified Emergency Room services. This structure makes the state vulnerable to acute care surges, particularly in lesser populated regions.
 
-1. How are Hospital Beds Distributed? (SQL Analysis)
-   
-A. Geographic Concentration (The 80/20 Rule in Health Care)
 
-The top 10 most populous counties account for a disproportionately high number of beds, leaving rural areas severely resource-poor.
+Geographic Distribution (Top 3 Counties)
+Business Insight: Los Angeles is the dominant hub with nearly 4x the capacity of San Diego.
 
-County Name Total Beds Facility Count Avg Beds/Facility
-Los Angeles 63,537 615 103.3
-San Diego 16,597 125 132.8
-Orange 14,570 113 128.9
-San Bernardino 9,631 86 112.0
-Riverside 9,321 96 97.1
-Santa Clara 9,221 68 135.6
+
+Top 3 Results:
+
+Los Angeles: 64,642 Beds (615 Facilities)
+San Diego: 16,597 Beds (125 Facilities)
+Orange: 14,570 Beds (113 Facilities)
+
 
 The Bed Deserts: The bottom counties demonstrate critical scarcity:
 County Name | Total Beds | Facility Count |
@@ -51,11 +51,26 @@ Sierra | 39 | 1 |
 B. Distribution by Facility Type
 The largest portion of licensed capacity is for long-term care, not intensive medical care.
 License Category Description Total Beds Avg Beds
-Skilled Nursing Facility 109,362 101.1
-General Acute Care Hospital 84,271 185.6
-Acute Psychiatric Hospital 4,260 101.4
+Skilled Nursing Facility     109,362    101.1
+General Acute Care Hospital   84,271    185.6
+Acute Psychiatric Hospital     4,260    101.4
 
 Acute Bed Gap: While General Acute Care Hospitals are typically larger (Avg 185 beds), the sheer volume of Skilled Nursing Beds (109k) means the state's infrastructure focus is on long-term maintenance rather than high-volume acute surge capacity.
+
+The "Bed Deserts" (Bottom 3 Counties)
+Business Insight: Rural counties are critically underserved. Mono County has only 1 facility with 17 beds.
+
+Key Findings: Mono (17), Mariposa (34), Trinity (38), Sierra (39).
+
+
+Facility Type Distribution
+Business Insight: The majority of beds are in Skilled Nursing, not Acute Hospitals.
+
+Results:
+Skilled Nursing Facility: 109,362 Beds (Avg size: 101)
+General Acute Care Hospital: 84,271 Beds (Avg size: 185)
+Acute Psychiatric Hospital: 4,260 Beds (Avg size: 101)
+
 
 C. Emergency Service Capability
 The majority of bed inventory is disconnected from emergency services:
@@ -81,6 +96,70 @@ Goal: This turns the large SNF capacity into a controllable, rapid-deployment su
 Invest in Regional Behavioral Health Centers:
 Action: The large average size of Acute Psychiatric Hospitals (Avg 101 beds) suggests institutional, centralized care. Shift funding and licensing towards establishing smaller, 20-30 bed, community-based Psychiatric Health Facilities in mid-sized counties (e.g., Fresno, Alameda).
 Goal: Decentralizing mental health care improves local access, reduces the strain on patients and families traveling long distances, and integrates behavioral health more seamlessly into regional service networks.
+
+
+# DataLimitations
+
+The MYSQL Wizard was only importing 1862 rows of approx 10800 rows. I found that commas in the Total_Number_Beds column was being misread. I used a simple find replace to replace every comma with a space.
+
+# Technical_SQL_Details
+
+A. Geographic Distribution (Top 3 Counties)
+Business Insight: Los Angeles is the dominant hub with nearly 4x the capacity of San Diego.
+SQL
+SELECT
+	COUNTY_NAME,
+	SUM(TOTAL_NUMBER_BEDS) as Total_Beds,
+	COUNT(*) as Facility_Count,
+	AVG((TOTAL_NUMBER_BEDS as Avg_Beds_Per_Facility
+FROM California_healthcare_cleanc
+GROUP BY COUNTY_NAME
+ORDER BY Total_Beds DESC
+LIMIT 10;
+Top 3 Results:
+Los Angeles: 64,642 Beds (615 Facilities)
+San Diego: 16,597 Beds (125 Facilities)
+Orange: 14,570 Beds (113 Facilities)
+
+Business Insight: Rural counties are critically underserved. Mono County has only 1 facility with 17 beds.
+SQL
+SELECT
+	COUNTY_NAME,
+	SUM(TOTAL_NUMBER_BEDS)  as Total_Beds
+FROM California_healthcare_cleanc
+GROUP BY COUNTY_NAME
+ORDER BY Total_Beds ASC
+LIMIT 10;
+Key Findings: Mono (17), Mariposa (34), Trinity (38), Sierra (39).
+
+Facility Type Distribution
+Business Insight: The majority of beds are in Skilled Nursing, not Acute Hospitals.
+SQL
+SELECT
+    LICENSE_CATEGORY_DESC,
+	SUM(TOTAL_NUMBER_BEDS) as Total_Beds,
+	AVG(TOTAL_NUMBER_BEDS) as Avg_Size
+FROM healthcare_cleanc
+GROUP BY LICENSE_CATEGORY_DESC
+ORDER BY Total_Beds DESC;
+Results:
+Skilled Nursing Facility: 109,362 Beds (Avg size: 101)
+General Acute Care Hospital: 84,271 Beds (Avg size: 185)
+Acute Psychiatric Hospital: 4,260 Beds (Avg size: 101)
+
+Emergency Room Correlation
+Business Insight: Most beds (117k+) are in facilities marked "Not Applicable" for ER service (likely Nursing Homes), confirming that most bed capacity is non-emergency.
+SQL
+SELECT
+    ER_SERVICE_LEVEL_DESC,
+	SUM(TOTAL_NUMBER_BEDS) as Total_Beds
+FROM California_healthcare_cleanc
+GROUP BY ER_SERVICE_LEVEL_DESC
+ORDER BY Total_Beds DESC;
+Results:
+Not Applicable: 117,231
+Emergency Basic: 66,810
+None : 11,255
 
 
 
