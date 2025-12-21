@@ -14,11 +14,11 @@ https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedD
 
 # Overview
 
-Investigating the distribution of hospital beds in California.
+Busines Question: How are hospital beds distributed across California.
 
 # Data_Description
 
-10800 + rows. Data consists of Facility Level Description, County, Total Number of Beds, ER Service Level, License Type, and License Category
+10800 + rows. The columns of interest are Facility Level Description, County, Total Number of Beds, ER Service Level, License Type, and License Category
 
 # Key_Insights
 
@@ -101,7 +101,7 @@ Goal: Decentralizing mental health care improves local access, reduces the strai
 
 # Data_Limitations
 
-The MYSQL Wizard was only importing 1862 rows of approx 10800 rows. I found that commas in the Total_Number_Beds column was being misread. I used a simple find replace to replace every comma with a space.
+The MYSQL Wizard was only importing 1862 rows of approx 10800 rows. I found that commas in the Total_Number_Beds column was being misread. I used a simple find replace to replace within Excel to swap every comma with a space. There was other dirty data but it was in columns that were irrevalant to the business question.
 
 # Technical_SQL_Details
 
