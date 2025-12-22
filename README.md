@@ -4,7 +4,7 @@ California Hospital Bed Distribution
 - [Overview](#overview)
 - [Data_Description](#Data_Description)
 - [Key_Insights](#Key_Insights)
-- [Data_Limitations](#Data_Limitations)
+- [Data_Quality_Control](#Data_Quality_Control)
 - [Technical_SQL_Details](#Technical_SQL_Details)
   
 https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedDistribution/CaliforniaHospitalBedDistribution
@@ -99,7 +99,7 @@ Action: The large average size of Acute Psychiatric Hospitals (Avg 101 beds) sug
 Goal: Decentralizing mental health care improves local access, reduces the strain on patients and families traveling long distances, and integrates behavioral health more seamlessly into regional service networks.
 
 
-# Data_Limitations
+# Data_Quality_Control
 
 The MYSQL Wizard was only importing 1862 rows of approx 10800 rows. I found that commas in the Total_Number_Beds column was being misread. I used a simple find replace to replace within Excel to swap every comma with a space. There was other dirty data but it was in columns that were irrevalant to the business question.
 
