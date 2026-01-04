@@ -42,12 +42,12 @@ The Bed Deserts: The bottom counties demonstrate critical scarcity:
 
 County Name Total Beds  
 
-Mono       17           
-Mariposa   34           
-Trinity    38
-Sierra     39 
+- Mono       17           
+- Mariposa   34           
+- Trinity    38
+- Sierra     39 
 
-- Distribution by Facility Type
+Distribution by Facility Type
 
 The largest portion of licensed capacity is for long-term care, not intensive medical care.
 
