@@ -39,8 +39,7 @@ Los Angeles: 64,642 Beds (615 Facilities)
 San Diego: 16,597 Beds (125 Facilities)
 Orange: 14,570 Beds (113 Facilities)
 
-
-- The Bed Deserts: The bottom counties demonstrate critical scarcity:
+The Bed Deserts: The bottom counties demonstrate critical scarcity:
 
 County Name Total Beds  
 
