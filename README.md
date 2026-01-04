@@ -32,12 +32,11 @@ Key Finding: Over 56% of total beds are non-acute (SNFs, Residential, etc.) or a
 Geographic Distribution (Top 3 Counties)
 Business Insight: Los Angeles is the dominant hub with nearly 4x the capacity of San Diego.
 
+Top 3 Results:
 
-- Top 3 Results:
-
-Los Angeles: 64,642 Beds (615 Facilities)
-San Diego: 16,597 Beds (125 Facilities)
-Orange: 14,570 Beds (113 Facilities)
+- Los Angeles: 64,642 Beds (615 Facilities)
+- San Diego: 16,597 Beds (125 Facilities)
+- Orange: 14,570 Beds (113 Facilities)
 
 The Bed Deserts: The bottom counties demonstrate critical scarcity:
 
