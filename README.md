@@ -14,7 +14,7 @@ https://public.tableau.com/app/profile/bradley.colson/viz/CaliforniaHospitalBedD
 
 # Overview
 
-Busines Question: How are hospital beds distributed across California.
+Business Question: How are hospital beds distributed across California?
 
 # Data_Description
 
@@ -24,7 +24,7 @@ Busines Question: How are hospital beds distributed across California.
 
 The distribution of hospital bed capacity in California is concentrated in major metropolitan areas, leading to obvious capacity between urban centers and rural counties. 
 
-The overall bed capacity is dominated by Skilled Nursing Facilities (SNFs), which cater to long-term care rather than critical acute emergencies.
+The overall bed capacity is dominated by Skilled Nursing Facilities, which cater to long-term care rather than critical acute emergencies.
 
 Key Finding: Over 56% of total beds are non-acute (SNFs, Residential, etc.) or are in facilities with no specified Emergency Room services. This structure makes the state vulnerable to acute care surges, particularly in lesser populated regions.
 
@@ -33,14 +33,15 @@ Geographic Distribution (Top 3 Counties)
 Business Insight: Los Angeles is the dominant hub with nearly 4x the capacity of San Diego.
 
 
-Top 3 Results:
+- Top 3 Results:
 
 Los Angeles: 64,642 Beds (615 Facilities)
 San Diego: 16,597 Beds (125 Facilities)
 Orange: 14,570 Beds (113 Facilities)
 
 
-The Bed Deserts: The bottom counties demonstrate critical scarcity:
+- The Bed Deserts: The bottom counties demonstrate critical scarcity:
+
 County Name Total Beds  
 
 Mono       17           
@@ -48,7 +49,8 @@ Mariposa   34
 Trinity    38
 Sierra     39 
 
-Distribution by Facility Type
+- Distribution by Facility Type
+
 The largest portion of licensed capacity is for long-term care, not intensive medical care.
 
 License Category Description Total Beds Avg Beds
@@ -61,10 +63,11 @@ Acute Bed Gap: While General Acute Care Hospitals are typically larger (Avg 185 
 The "Bed Deserts" (Bottom 3 Counties)
 Business Insight: Rural counties are critically underserved. Mono County has only 1 facility with 17 beds.
 
-Key Findings: Mono (17), Mariposa (34), Trinity (38), Sierra (39).
+- Key Findings: Mono (17), Mariposa (34), Trinity (38), Sierra (39).
 
 
 Facility Type Distribution
+
 Business Insight: The majority of beds are in Skilled Nursing, not Acute Hospitals.
 
 Results:
