@@ -22,6 +22,30 @@ Business Question: How are hospital beds distributed across California?
 
 # Key_Insights
 
+Executive Summary: California Healthcare Infrastructure Gap
+
+1. The Capacity Imbalance (Urban vs. Rural)
+California’s bed capacity is highly centralized, creating "Bed Deserts" in rural corridors.
+The Hubs: Los Angeles (64.6k beds) holds nearly 4x the capacity of San Diego, creating a massive logistical dependency on a single metro area.
+The Deserts: Mono, Mariposa, and Trinity counties operate on critically low inventory (<40 beds each), making them incapable of handling even minor local surges.
+
+2. The "Acute Care" Vulnerability
+   
+A high bed count is misleading. Over 56% of total state beds are non-acute (Skilled Nursing or Residential), meaning they cannot support emergency or intensive care needs.
+Total Inventory: 109k Skilled Nursing beds vs. only 84k General Acute beds.
+Emergency Gap: 117k beds (the majority) have no ER service level, leaving the state vulnerable to acute care bottlenecks.
+
+3. Strategic Recommendations
+   
+To mitigate these risks without massive infrastructure spend, I propose two targeted initiatives:
+Tele-Acute Integration for Rural Hubs: Mandate 24/7 Tele-ICU and Tele-Stroke partnerships for counties with <50 beds (e.g., Mono, Sierra). This upgrades existing basic beds to "virtual" specialist beds at a fraction of the cost of new construction.
+Decentralized Behavioral Health: Shift from large, centralized 100+ bed psychiatric institutions toward 20-30 bed community-based facilities in mid-sized counties. This improves local access and reduces the patient transport burden on emergency services.
+
+Overall
+
+
+
+
 The distribution of hospital bed capacity in California is concentrated in major metropolitan areas, leading to obvious capacity between urban centers and rural counties. 
 
 The overall bed capacity is dominated by Skilled Nursing Facilities, which cater to long-term care rather than critical acute emergencies.
